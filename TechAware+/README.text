@@ -1,0 +1,77 @@
+TechAware
+
+Proje Açıklaması
+
+TechAware, teknoloji bağımlılığı hakkında farkındalık yaratmayı amaçlayan bilgilendirici bir platformdur. Bu projede, teknoloji bağımlılığının etkilerini ve bu bağımlılıkla başa çıkma yollarını anlatan çeşitli kaynaklar ve makaleler bulunmaktadır.
+
+Kurulum Adımları
+
+Aşağıdaki adımları izleyerek projeyi yerel ortamınızda çalıştırabilirsiniz.
+
+Gereksinimler
+
+- XAMPP (https://www.apachefriends.org/index.html)
+- Git (https://git-scm.com/)
+- Python ve Flask (https://www.python.org/)
+
+Adım 1: XAMPP'ı Kurun ve Yapılandırın
+
+1. XAMPP İndir (https://www.apachefriends.org/download.html) ve bilgisayarınıza kurun.
+2. XAMPP kontrol panelini açın ve Apache ve MySQL servislerini başlatın.
+3. htdocs klasörüne gidin. Bu klasör genellikle `C:\xampp\htdocs\` yolunda bulunur.
+
+Adım 2: Proje Dosyalarını İndirin
+
+1. GitHub'dan proje dosyalarını indirin veya klonlayın:
+
+   git clone https://github.com/kullanici-adi/proje-adi.git
+
+2. İndirdiğiniz veya klonladığınız proje dosyalarını `htdocs` klasörüne kopyalayın. Örneğin, `C:\xampp\htdocs\TechAware` gibi.
+
+Adım 3: Veritabanını Kurun
+
+1. XAMPP kontrol panelinden MySQL servisini başlatın.
+2. Tarayıcınızda `http://localhost/phpmyadmin` adresine gidin.
+3. Yeni bir veritabanı oluşturun. Veritabanı adı olarak `techaware` kullanabilirsiniz.
+4. Gerekli veritabanı tablolarını oluşturmak için SQL dosyasını (varsa) phpMyAdmin aracılığıyla içe aktarın.
+
+Adım 4: Proje Ayarlarını Yapın
+
+1. Proje dosyaları içinde, `config.php` dosyasını (varsa) açın ve veritabanı bağlantı ayarlarını yapın:
+
+   <?php
+   define('DB_SERVER', 'localhost');
+   define('DB_USERNAME', 'root');
+   define('DB_PASSWORD', '');
+   define('DB_NAME', 'techaware');
+   ?>
+
+Adım 5: Flask Projesini Kurun ve Çalıştırın
+
+1. Python ve Flask kurulumunu yapın:
+
+   pip install flask
+
+2. `app.py` dosyasının bulunduğu klasöre gidin ve Flask uygulamasını çalıştırın:
+
+   python app.py
+
+3. Tarayıcınızda `http://localhost:5000` adresine gidin.
+
+Adım 6: İletişim Formu Yapılandırması
+
+İletişim formunun çalışması için, `contact.php` dosyasındaki e-posta ayarlarını yapılandırmanız gerekmektedir. Aşağıdaki adımları izleyin:
+
+1. PHPMailer'ı kullanarak e-posta göndermek için gerekli ayarları `contact.php` dosyasında yapın.
+2. Gmail hesabınızı kullanarak e-posta göndermek için, Google hesabınızda "Uygulama Şifreleri" oluşturun ve bu şifreyi `contact.php` dosyasında kullanın.
+
+   $mail->Username = 'your-email@gmail.com';
+   $mail->Password = 'your-app-password';
+
+Yardım ve Destek
+
+Herhangi bir sorunla karşılaşırsanız veya yardım almak isterseniz, GitHub projemizin Issues sekmesine giderek bir hata bildirimi oluşturabilirsiniz.
+
+Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır. Daha fazla bilgi için LICENSE dosyasına bakın.
